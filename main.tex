@@ -1,0 +1,193 @@
+% a mashup of hipstercv, friggeri and twenty cv
+% https://www.latextemplates.com/template/twenty-seconds-resumecv
+% https://www.latextemplates.com/template/friggeri-resume-cv
+
+\documentclass[lighthipster]{simplehipstercv}
+% available options are: darkhipster, lighthipster, pastel, allblack, grey, verylight, withoutsidebar
+% withoutsidebar
+\usepackage[utf8]{inputenc}
+\usepackage[default]{raleway}
+\usepackage[margin=1cm, a4paper]{geometry}
+
+
+%------------------------------------------------------------------ Variablen
+
+\newlength{\rightcolwidth}
+\newlength{\leftcolwidth}
+\setlength{\leftcolwidth}{0.23\textwidth}
+\setlength{\rightcolwidth}{0.75\textwidth}
+
+%------------------------------------------------------------------
+\title{New Simple CV}
+\author{\LaTeX{} Ninja}
+\date{June 2019}
+
+\pagestyle{empty}
+\begin{document}
+
+
+\thispagestyle{empty}
+%-------------------------------------------------------------
+
+\section*{Start}
+
+\simpleheader{headercolour}{Jérémie}{Regnault}{Master 2 MoCAD}{white}
+
+
+
+%------------------------------------------------
+
+% this has to be here so the paracols starts..
+\subsection*{}
+\vspace{4em}
+
+\setlength{\columnsep}{1.5cm}
+\columnratio{0.23}[0.75]
+\begin{paracol}{2}
+\hbadness5000
+%\backgroundcolor{c[1]}[rgb]{1,1,0.8} % cream yellow for column-1 %\backgroundcolor{g}[rgb]{0.8,1,1} % \backgroundcolor{l}[rgb]{0,0,0.7} % dark blue for left margin
+
+\paracolbackgroundoptions
+
+% 0.9,0.9,0.9 -- 0.8,0.8,0.8
+
+
+\footnotesize
+{\setasidefontcolour
+\flushright
+\begin{center}
+    \roundpic{profil.png}
+\end{center}
+
+\bg{cvgreen}{white}{À propos}\\[0.5em]
+
+{\footnotesize
+Actuellement en Master 2 MoCAD à l'université de Lille,
+je suis à la recherche d'un stage de fin d'études d'une durée de 3 à 6 mois à partir de mars 2020,
+dans le domaine de l'intelligence artificielle, avec une préférence pour les systèmes multi-agents et l'apprentissage automatique.}
+\bigskip
+
+\bg{cvgreen}{white}{Informations personnelles} \\[0.5em]
+Jérémie Regnault
+
+nationalité: Française
+
+1994
+
+\bigskip
+
+\bg{cvgreen}{white}{Spécialités} \\[0.5em]
+
+Système multi-agents ~•~ Apprentissage automatique ~•~ Python
+
+\bigskip
+
+
+
+\bigskip
+
+\bg{cvgreen}{white}{Centres d'intérêt}\\[0.5em]
+
+Escrime artistique
+
+Moyen-Âge
+
+Jeux de rôle
+\bigskip
+
+\vspace{4em}
+
+%\infobubble{\faAt}{cvgreen}{white}{jack@sparrow.org}
+\infobubble{\faTwitter}{cvgreen}{white}{@Neobrand1}
+\infobubble{\faFacebook}{cvgreen}{white}{Jérémie Regnault}
+\infobubble{\faGitlab}{cvgreen}{white}{Neobrand}
+
+\phantom{turn the page}
+
+\phantom{turn the page}
+}
+%-----------------------------------------------------------
+\switchcolumn
+
+\small
+\section*{Résumé}
+
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2017--2020}{Master Informatique}{Étudiant}{Université de Lille \color{cvred}}{Ma position actuelle. Spécialisation en MoCAD(Modèles Complexes Algorithmes et Données)}{} \\
+    \cvevent{2012--2017}{Licence Informatique}{Étudiant}{Université de Lille \color{cvred}}{Licence en informatique à l'Université de Lille}{}
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.35\textwidth}
+\section*{Diplômes}
+\begin{tabular}{r p{0.6\textwidth} c}
+    \cvdegree{2017}{Licence}{Informatique}{Université de Lille \color{headerblue}}{}{UL-RVB-2014.png} \\
+    \cvdegree{2012}{Baccalauréat Scientifique}{Spécialité SVT}{Lycée Beaupré, Haubourdin \color{headerblue}}{Mention européenne}{} \\
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Programmation}
+\begin{tabular}{r @{\hspace{0.5em}}l}
+     \bg{skilllabelcolour}{iconcolour}{python} & \barrule{0.45}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{Java} & \barrule{0.4}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{git} & \barrule{0.3}{0.5em}{cvgreen} \\
+     \bg{skilllabelcolour}{iconcolour}{\LaTeX} & \barrule{0.2}{0.5em}{cvgreen} \\
+\end{tabular}
+\end{minipage}
+
+\section*{Expériences Professionnelles}
+\begin{tabular}{r| p{0.5\textwidth} c}
+    \cvevent{2017}{Stage dans l'équipe RMoD}{Stagiaire}{Inria Nord Europe \color{cvred}}{Amélioration des capacités de déploiement de Pharo}{} \\
+\end{tabular}
+\vspace{3em}
+
+\begin{minipage}[t]{0.3\textwidth}
+\section*{Certifications}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.55\textwidth}}
+    2013 & C2I \\
+\end{tabular}
+\bigskip
+
+\section*{Langues}
+\begin{tabular}{l | ll}
+\textbf{Français} & C2 & {\phantom{x}\footnotesize langue maternelle} \\
+\textbf{Anglais} & C2 & %\pictofraction{\faCircle}{cvgreen}{4}{black!30}{0}{\tiny} \\
+\end{tabular}
+\bigskip
+
+\end{minipage}\hfill
+%\begin{minipage}[t]{0.3\textwidth}
+%\section*{Publications}
+%\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.7\textwidth}}
+    %1729 & \emph{How I almost got killed by Lady Swan}, Tortuga Printing Press. \\
+    %1720 & ``Privateering for Beginners'', in: \emph{The Pragmatic Pirate} (1/1720).
+%\end{tabular}
+%\bigskip
+
+%\section*{Talks}
+%\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize}p{0.6\textwidth}}
+    %Nov. 1726 & ``How I lost my ship (\& and how to get it back)'', at: \emph{Annual Pirate's Conference} in Tortuga, Nov. 1726.
+%\end{tabular}
+%\end{minipage}
+
+
+
+
+
+
+\vfill{} % Whitespace before final footer
+
+%----------------------------------------------------------------------------------------
+%	FINAL FOOTER
+%----------------------------------------------------------------------------------------
+\setlength{\parindent}{0pt}
+\begin{minipage}[t]{\rightcolwidth}
+\begin{center}\fontfamily{\sfdefault}\selectfont \color{black!70}
+{\small Jérémie Regnault \icon{\faPhone}{cvgreen}{} 06.41.93.47.26 \icon{\faAt}{cvgreen}{} \protect\url{jeremie.regnault@outlook.com}
+}
+\end{center}
+\end{minipage}
+
+\end{paracol}
+
+\end{document}
