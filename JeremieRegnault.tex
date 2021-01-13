@@ -1,0 +1,164 @@
+\documentclass[12pt, a4paper]{article}
+
+% Police
+\usepackage{arev}
+
+\usepackage[explicit]{titlesec}
+\usepackage{titling}
+\usepackage[margin=0.75cm,top=0cm]{geometry}
+\usepackage{color}
+\usepackage{tcolorbox}
+\usepackage{graphicx}
+\usepackage{multicol}
+
+\definecolor{darkblue}{rgb}{0.10,0.45,0.85}
+
+% ==================== Informations ==================== %
+\author{Jérémie Regnault}
+\title{Ingénieur logiciel}
+\newcommand{\address}{59320 Hallennes-Lez-Haubourdin}
+\newcommand{\phone}{06.41.93.47.26}
+\newcommand{\email}{jeremie.regnault@outlook.com}
+\newcommand{\webpage}{jregnault.github.io}
+\newcommand{\mobility}{Mobilité sur Lille et alentours}
+
+% ==================== Formatting ====================== %
+\renewcommand{\maketitle}{
+	\begin{tcolorbox}[
+		size=tight,oversize,
+		sharp corners,
+		colback=darkblue,
+		colframe=cyan,
+		left=56pt,
+		right=90pt,
+		top=0.75cm,
+		bottom=0.75cm
+	]
+    \begin{minipage}[t]{.15\textwidth}
+        \includegraphics[width=\textwidth]{portrait.png}
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.80\textwidth}
+        \vspace{-2.7cm}
+        \begin{multicols}{2}
+            \par{\Huge \textcolor{white}{\theauthor}}
+            \par{\LARGE \textcolor{white}{\thetitle} \par}
+            \hfill
+            \begin{flushright}
+                \par{
+                    \textcolor{white}{
+                        \address \\
+                        \phone \\
+                        \email \\
+                        \webpage \\
+                        \mobility \\
+                    }
+                }
+            \end{flushright}
+        \end{multicols}
+    \end{minipage}
+\end{tcolorbox}
+}
+
+\titleformat{\section}
+    {\Large}
+    {\textcolor{darkblue}{#1}}
+    {0em}
+    {}
+    [\titlerule]
+
+\newcommand{\cventry}[4]{
+    \begin{minipage}[t]{2.5cm}
+        \centering{#1}
+    \end{minipage}
+    \vline
+    \hspace{.5cm}
+    \begin{minipage}[t]{.85\linewidth}
+        \textcolor{darkblue}{\large \bf#2}\\\textit{#3} \\\footnotesize{#4}
+        \vspace{.25cm}
+    \end{minipage}
+}
+
+\newcommand{\cvinterest}[4]{
+    \begin{minipage}[t]{2.5cm}
+        \centering{#1}
+    \end{minipage}
+    \hspace{.5cm}
+    \begin{minipage}[t]{.85\linewidth}
+        {\large \bf#2}\\\textit{#3} \\\footnotesize{#4}
+        \vspace{.25cm}
+    \end{minipage}
+}
+
+\newcommand{\cvitem}[2]{
+    \begin{minipage}[t]{2.5cm}
+        {\bf#1} \hfill
+    \end{minipage}
+    #2
+    \hfill\\
+}
+
+\begin{document}
+    \maketitle
+    \vspace*{-0.5cm}
+
+    \section{Compétences}
+    \begin{minipage}[t]{.3\linewidth}
+        \textcolor{darkblue}{\large \bf Langages} \\
+        $\bullet$ Python 3 \\
+        $\bullet$ HTML5 \\
+        $\bullet$ Java
+    \end{minipage}
+    \begin{minipage}[t]{.3\linewidth}
+        \textcolor{darkblue}{\large \bf Technologies} \\
+        $\bullet$ Git \\
+        $\bullet$ Linux \\
+        $\bullet$ Maven
+    \end{minipage}
+    \begin{minipage}[t]{.5\linewidth}
+        \textcolor{darkblue}{\large \bf Savoir-faire} \\
+        $\bullet$ Élaborer un cahier des charges \\
+        $\bullet$  \\
+        $\bullet$
+    \end{minipage}
+
+    \vspace*{-0.5cm}
+
+    \section{Expériences}
+        \cventry{Mars -- Août 2020}{Ingénieur Intelligence Artificielle (Stagiaire)}{Elosi, Villeneuve d'Ascq}{
+            $\bullet$ Montée en compétence en traitement du langage naturel (\textbf{NLP}) \\
+            $\bullet$ Montée en compétence dans le deep learning, plus spécifiquement les modèles encodeurs / décodeurs \\
+            (\textbf{Python 3}, \textbf{TensorFlow}, \textbf{PyTorch})
+        }
+        \cventry{Juin -- Août 2017}{Analyste Programmeur (Stagiaire)}{Inria - Nord Europe - Équipe RMoD}{
+            $\bullet$ Analyse des problèmes rencontrés lors de l'utilisation de Pharo dans un environnement en lecture seule \\
+            $\bullet$ Réalisation d'une étude auprès de la communauté Pharo pour définir les axes d'amélioration du langage \\
+            (\textbf{Pharo})
+        }
+    
+    \vspace*{-0.5cm}
+
+    \section{Formation}
+        \cventry{2017 -- 2020}{Master Informatique}{Université de Lille}{
+            Spécialisation en Modèles Complexes, Algorithmes et Données (MoCAD)\\
+            $\bullet$ Systèmes multi-agents simples (simulation de particules, wator)(\textbf{Python 3}, \textbf{PyGame})\\
+            $\bullet$ Algorithme d'optimisation combinatoire basé sur des heuristiques pour résoudre le problème du voyageur de commerce (\textbf{Python 3})\\
+            $\bullet$ Interpréteur JavaScript basique (\textbf{Java}, \textbf{C}) \\
+            $\bullet$ Gestionnaire de bibliothèque (\textbf{Java EE}) \\
+            $\bullet$ Serveur FTP avec API REST (\textbf{Java})
+        }
+        \cventry{2012 -- 2017}{Licence Informatique}{Université de Lille}{}
+
+    \vspace*{-0.5cm}
+
+    \section{Langues}
+        \cvitem{Anglais}{Courant (Niveau C2, TOEIC: 985)}
+    
+    \vspace*{-0.5cm}
+
+    \section{Centres d'intérêt}
+        \cvinterest{depuis 2016}{Escrime Artistique}{Académie d'Escrime Vauban Lille (AEVL)}{
+            Création de combats chorégraphiés à destination de pièces de théâtres et de scénettes.
+        }
+        
+\end{document}
