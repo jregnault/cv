@@ -15,7 +15,7 @@
 
 % ==================== Informations ==================== %
 \author{Jérémie Regnault}
-\title{Ingénieur logiciel}
+\title{Développeur Python}
 \newcommand{\address}{59320 Hallennes-Lez-Haubourdin}
 \newcommand{\phone}{06.41.93.47.26}
 \newcommand{\email}{jeremie.regnault@outlook.com}
@@ -50,7 +50,7 @@
                         \address \\
                         \phone \\
                         \email \\
-                        \webpage \\
+                        site web : \webpage \\
                         \mobility \\
                     }
                 }
@@ -77,6 +77,11 @@
         \textcolor{darkblue}{\large \bf#2}\\\textit{#3} \\\footnotesize{#4}
         \vspace{.25cm}
     \end{minipage}
+}
+
+\newcommand{\cvproject}[4]{
+    \textcolor{darkblue}{\large \bf#1}\\\footnotesize{\textit{#2}}\\#3\\(\footnotesize{#4})
+    \vspace{.25cm}
 }
 
 \newcommand{\cvinterest}[4]{
@@ -107,19 +112,21 @@
         \textcolor{darkblue}{\large \bf Langages} \\
         $\bullet$ Python 3 \\
         $\bullet$ HTML5 / CSS3 \\
-        $\bullet$ Java
+        $\bullet$ C \\
+        $\bullet$ Java \\
     \end{minipage}
     \begin{minipage}[t]{.28\linewidth}
         \textcolor{darkblue}{\large \bf Technologies} \\
-        $\bullet$ Git \\
-        $\bullet$ Linux / Windows \\
-        $\bullet$ Maven
+        $\bullet$ Git / GitHub / GitLab \\
+        $\bullet$ GNU Make / Bash \\
+        $\bullet$ Docker \\
+        $\bullet$ Maven \\
     \end{minipage}
     \begin{minipage}[t]{.5\linewidth}
         \textcolor{darkblue}{\large \bf Savoir-faire} \\
-        $\bullet$ Élaborer un cahier des charges \\
         $\bullet$ Méthodologie AGILE \\
-        $\bullet$ Conception / développement applicatif
+        $\bullet$ Conception de diagrammes UML \\
+        $\bullet$ CI/CD \\
     \end{minipage}
 
     \vspace*{-0.5cm}
@@ -127,12 +134,11 @@
     \section{Expériences}
         \cventry{Mars -- Août 2020}{Ingénieur Intelligence Artificielle (Stagiaire)}{Elosi, Villeneuve d'Ascq}{
             $\bullet$ Montée en compétence en traitement du langage naturel (\textbf{NLP}) \\
-            $\bullet$ Montée en compétence dans les modèles encodeurs / décodeurs (\textbf{deep learning})\\
-            (\textbf{Python 3}, \textbf{TensorFlow}, \textbf{PyTorch})
+            (\textbf{Python 3}, \textbf{TensorFlow}, \textbf{PyTorch}, \textbf{Docker})
         }
         \cventry{Juin -- Août 2017}{Analyste Programmeur (Stagiaire)}{Inria - Nord Europe - Équipe RMoD}{
-            $\bullet$ Analyse des problèmes rencontrés lors de l'utilisation de Pharo dans un environnement en lecture seule \\
-            $\bullet$ Réalisation d'une étude auprès de la communauté Pharo pour définir les axes d'amélioration du langage \\
+            $\bullet$ Réalisation d'un test de robustesse de Pharo dans un environnement en lecture seule \\
+            $\bullet$ Réalisation d'une étude auprès de la communauté Pharo pour définir les correctifs à apporter \\
             (\textbf{Pharo})
         }
     
@@ -141,19 +147,21 @@
     \section{Formation}
         \cventry{2017 \\--\\ 2020}{Master Informatique}{Université de Lille}{
             Spécialisation en Modèles Complexes, Algorithmes et Données (MoCAD)\\
-            \underline{Réalisations:} \\
-            $\bullet$ Systèmes multi-agents simples (simulation de particules, wator)(\textbf{Python 3}, \textbf{PyGame})\\
-            $\bullet$ Algorithme d'optimisation combinatoire basé sur des heuristiques pour résoudre le problème du voyageur de commerce (\textbf{Python 3})\\
-            $\bullet$ Interpréteur JavaScript basique (\textbf{Java}, \textbf{C}) \\
-            $\bullet$ Gestionnaire de bibliothèque (\textbf{Java EE}) \\
-            $\bullet$ Serveur FTP avec API \textbf{REST} (\textbf{Java})
         }
         \cventry{2012 \\--\\ 2017}{Licence Informatique}{Université de Lille}{}
 
     \vspace*{-0.5cm}
 
+    \section{Projets}
+        \cvproject{Site web vitrine}
+            {https://jregnault.github.io/}
+            {Réalisation de mon site web professionnel vitrine, avec gestion de thème par défaut.}
+            {\textbf{HTML5}, \textbf{CSS3}, \textbf{Git}, \textbf{GitHub}}
+
+    \vspace*{-0.5cm}
+
     \section{Langues}
-        \cvitem{Anglais}{Courant (Niveau C2, TOEIC: 985)}
+        \cvitem{Anglais}{Courant (Niveau C2, TOEIC: 985 (11-2019))}
     
     \vspace*{-0.5cm}
 
